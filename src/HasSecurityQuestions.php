@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 trait HasSecurityQuestions
 {
-    public function saveQuestions(array $questions)
+    public function save_questions(array $questions)
     {
         /** @var Model $user */
         $user = $this;
@@ -28,6 +28,19 @@ trait HasSecurityQuestions
                 ]);
             }
         }
+    }
+
+    public function check_answer(SecurityQuestion $question, string $answer): bool
+    {
+        /** @var Model $model */
+        $model = $this;
+        $entry = SecurityQuestionEntry::query()
+            ->where("user_id", $model->getKey())
+            ->where("security_question_id", $question->getKey())
+            ->first();
+        if (!$entry) return false;
+
+        return match_answer($answer, $entry->{"answer"});
     }
 
     public function questions(): HasMany

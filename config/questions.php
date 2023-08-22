@@ -41,5 +41,10 @@ return [
         "What is the name of your favorite actor / actress?",
         "What is the name of the hospital where you were born?",
     ],
+    /*
+     * Strict mode being false ignores case and whitespaces when storing and matching answers
+     */
+    'strict' => false,
+    'middleware' => []
 ];
 

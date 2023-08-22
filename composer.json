@@ -25,7 +25,9 @@
       ]
     }
   },
-  "require": {},
+  "require": {
+    "php": "^7.4|^8.0"
+  },
   "require-dev": {
     "laravel/framework": "^8.0"
   }
