@@ -1,0 +1,18 @@
+{
+    "name": "ykalinde/security-question-helpers",
+    "description": "Helpers for managing security questions within your Laravel project",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ykalinde\\SecurityQuestionHelpers\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yamikani Kalinde",
+            "email": "yamikanikalinde@gmail.com"
+        }
+    ],
+    "require": {}
+}
