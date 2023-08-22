@@ -1,11 +1,11 @@
 {
-    "name": "ykalinde/security-question-helpers",
+    "name": "bluecloud/security-question-helpers",
     "description": "Helpers for managing security questions within your Laravel project",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Ykalinde\\SecurityQuestionHelpers\\": "src/"
+            "Bluecloud\\SecurityQuestionHelpers\\": "src/"
         }
     },
     "authors": [
@@ -14,5 +14,16 @@
             "email": "yamikanikalinde@gmail.com"
         }
     ],
-    "require": {}
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bluecloud\\SecurityQuestionHelpers\\SecurityQuestionHelpersProvider"
+            ]
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "laravel/framework": "^8.0"
+    }
 }

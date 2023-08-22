@@ -1,5 +1,5 @@
 ## Installation
 
 ```
-composer require ykalinde/security-question-helpers
+composer require bluecloud/security-question-helpers
 ```
