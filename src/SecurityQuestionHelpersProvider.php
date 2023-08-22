@@ -44,7 +44,10 @@ class SecurityQuestionHelpersProvider extends ServiceProvider
 
     protected function registerRoutes()
     {
-        Route::group(['prefix' => config('questions.path', 'security-questions')], function () {
+        $prefix = config('questions.path', 'security-questions');
+        $middleware = config('questions.middleware', []);
+
+        Route::group(['prefix' => $prefix, "middleware" => $middleware], function () {
             $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
         });
 

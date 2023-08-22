@@ -41,10 +41,14 @@ return [
         "What is the name of your favorite actor / actress?",
         "What is the name of the hospital where you were born?",
     ],
-    /*
-     * Strict mode being false ignores case and whitespaces when storing and matching answers
-     */
+
+    // Strict mode being false ignores case and whitespaces when storing and matching answers
     'strict' => false,
+
+    // Base url for security question routes
+    'path' => 'security-questions',
+
+    // Middleware for security question routes e.g., ["auth:sanctum"]
     'middleware' => []
 ];
 
