@@ -3,6 +3,7 @@
 namespace Bluecloud\SecurityQuestionHelpers;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 trait HasSecurityQuestions
 {
@@ -27,5 +28,12 @@ trait HasSecurityQuestions
                 ]);
             }
         }
+    }
+
+    public function questions(): HasMany
+    {
+        /** @var Model $model */
+        $model = $this;
+        return $model->hasMany(SecurityQuestionEntry::class)->with("question");
     }
 }
