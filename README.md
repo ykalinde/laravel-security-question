@@ -5,7 +5,7 @@ Laravel security questions helps you easily integration security question facili
 ## Installation
 
 ```
-composer require bluecloud/security-question-helpers
+composer require bluecloud/laravel-security-question
 ```
 
 ## Migrate Tables
